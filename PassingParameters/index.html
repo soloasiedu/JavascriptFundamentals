@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>Passing Parameters</title>
+        
+    </head>
+    <body>
+        
+       <p>Passing paramters</p>
+       <button id="btn">Click here!</button>
+       <p id="demo"></p>
+
+        <script>
+           var p1 = 7;
+           var p2 = 8;
+           document.getElementById("btn").addEventListener("click", function(){
+               multipy(p1,p2);
+           });
+           
+           function multipy(a, b){
+               var answer = a * b;
+               document.getElementById("demo").innerHTML = answer;
+           }
+        </script>
+    </body>
+  
+</html>
