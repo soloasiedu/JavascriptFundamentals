@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>onchange example</title>
+        
+    </head>
+    <body onload="window.alert('Page has finished loading')">
+        
+        <div onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" style="width: 300px; height: 200px; background-color: antiquewhite; 
+        padding: 30px;">Some text</div>
+
+        <script>
+            function mouseDown(obj){
+                obj.style.backgroundColor = 'blue';
+                obj.innerHTML = 'Release me!';
+            }
+            function mouseUp(obj){
+                obj.style.backgroundColor = 'red';
+                obj.innerHTML = 'Thank you.';
+            }
+        </script>
+    </body>
+  
+</html>

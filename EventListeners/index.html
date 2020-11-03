@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>onchange example</title>
+        
+    </head>
+    <body>
+        
+       <button type="button" id="btn">Click me</button>
+       <p id="demo"></p>
+
+        <script>
+            var x = document.getElementById("btn");
+            x.addEventListener("mouseover", mouseoverFunction);
+            x.addEventListener("click", mouseclickFunction);
+            x.addEventListener("mouseout", mouseoutFunction);
+
+
+            function mouseoverFunction(){
+                document.getElementById("demo").innerHTML += "mouse over <br>"
+            }
+            function mouseclickFunction(){
+                document.getElementById("demo").innerHTML += "Clicked <br>"
+            }
+            function mouseoutFunction(){
+                document.getElementById("demo").innerHTML += "mouse out <br>"
+            }
+
+        </script>
+    </body>
+  
+</html>

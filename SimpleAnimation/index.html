@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>Change HTML with javascript</title>
+        <style>
+            .animation{
+                width: 400px;
+                height: 400px;
+                position: relative;
+                background-color: yellow;
+            }
+            #animate{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="animation">
+            <div id="animate"></div>
+        </div>
+        <button type="button" onclick="animation()">Animate</button>
+
+        <script>
+           
+
+           function animation(){
+                
+                var elem = document.getElementById('animate');
+                var pos = 0;
+                var id = setInterval(animate, 5);
+                function animate(){
+                    if(pos == 350){
+                        clearInterval(id);
+                    }else{
+                        pos++;
+                        elem.style.top = pos + "px";
+                        elem.style.left = pos + "px";
+                    }
+                }
+               
+           }
+        </script>
+    </body>
+  
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>Change HTML with javascript</title>
+    </head>
+    <body>
+        <h1 onmouseover="this.style.color='red'" onmouseout="this.style.color='#000'">Variable scopes</h1>
+        <p id="demo">The scope is the set of variables that you have access to.</p>
+        <button type="button" onclick="this.innerHTML = Date()">The time is?</button>
+        <a href="#" name="someLink">SomeLink</a>
+
+        <script>
+            function myFunction(){
+               carName = "Bugatti";
+            }
+
+            // console.log(document.documentElement);
+             document.write(Date());
+        </script>
+    </body>
+  
+</html>

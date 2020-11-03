@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>Change HTML with javascript</title>
+    </head>
+    <body>
+        <p>A script on this page starts a timer</p>
+        <p id="demo"></p>
+        <button type="button" onclick="stopTimer()">Stop Timer</button>
+
+        <script>
+           var timer = setInterval(timerFunction, 1000);
+
+           function timerFunction(){
+               var d = new Date();
+               var t = d.toLocaleTimeString();
+               document.getElementById("demo").innerHTML = t;
+           }
+
+           function stopTimer(){
+               clearInterval(timer);
+           }
+
+        </script>
+    </body>
+  
+</html>
