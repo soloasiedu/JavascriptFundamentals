@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>Difference between bubbling and capture</title>
+        <style>
+            #div1 {
+                width: 600px;
+                height: 150px;
+                background-color: orange;
+                position: relative;
+                padding: 50px;
+                margin-bottom: 20px;
+            }
+            #para1{
+                width: 200px;
+                height: 30px;
+                background-color: white;
+                position: absolute;
+                top: 100px;
+                left: 50px;
+                padding: 20px;
+            }
+            #div2 {
+                width: 600px;
+                height: 150px;
+                background-color: orange;
+                position: relative;
+                padding: 50px;
+            }
+            #para2{
+                width: 200px;
+                height: 30px;
+                background-color: white;
+                position: absolute;
+                top: 100px;
+                left: 50px;
+                padding: 20px;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        
+       <div id="div1">
+           <h2>Bubbling</h2>
+           <p id="para1">Click me</p>
+       </div>
+       <div id="div2">
+            <h2>Capturing</h2>
+            <p id="para2">Click me</p>
+       </div>
+
+        <script>
+            document.getElementById("div1").addEventListener("click", function(){
+                alert("You have clicked the orange box.");
+            }, false);
+            document.getElementById("para1").addEventListener("click", function(){
+                alert("You have clicked the white box");
+            },false);
+            document.getElementById("div2").addEventListener("click", function(){
+                alert("You have clicked the orange box.");
+            }, true);
+            document.getElementById("para2").addEventListener("click", function(){
+                alert("You have clicked the white box.");
+            }, true);
+        </script>
+    </body>
+  
+</html>
