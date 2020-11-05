@@ -20,13 +20,21 @@
           <h1 id="thirdh1">This is another random text</h1>
           
           <p id="thirdp"></p>
+          <h1 id="fourthh1">This is another random text</h1>
+          
+          <p id="fourthp"></p>
+          <h1 id="fifthh1">This is another random text</h1>
+          
+          <p id="fifthp"></p>
           
           <script>
             document.getElementById("firstp").innerHTML = document.getElementById('firsth1').innerHTML;
             document.getElementById('secondp').innerHTML = document.getElementById('secondh1').firstChild.nodeValue;
             document.getElementById('thirdp').innerHTML = document.getElementById('thirdh1').childNodes[0].nodeValue;
-            alert(document.body.innerHTML);
-            alert(document.documentElement.innerHTML);
+            // alert(document.body.innerHTML);
+            // alert(document.documentElement.innerHTML);
+            document.getElementById('fourthp').innerHTML = document.getElementById('fourthh1').nodeName;
+            document.getElementById('fifthp').innerHTML = document.getElementById('fifthh1').nodeType;
           </script>
     </body>
   
