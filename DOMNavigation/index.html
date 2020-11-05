@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>Removing Event listeners</title>
+        <style>
+
+        </style>
+        
+    </head>
+    <body>
+        <h1 id="firsth1">This is some random text</h1>
+          
+          <p id="firstp"></p>
+          <h1 id="secondh1">This is another random text</h1>
+          
+          <p id="secondp"></p>
+          <h1 id="thirdh1">This is another random text</h1>
+          
+          <p id="thirdp"></p>
+          
+          <script>
+            document.getElementById("firstp").innerHTML = document.getElementById('firsth1').innerHTML;
+            document.getElementById('secondp').innerHTML = document.getElementById('secondh1').firstChild.nodeValue;
+            document.getElementById('thirdp').innerHTML = document.getElementById('thirdh1').childNodes[0].nodeValue;
+            alert(document.body.innerHTML);
+            alert(document.documentElement.innerHTML);
+          </script>
+    </body>
+  
+</html>
