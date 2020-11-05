@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="">
+        <title>Removing Event listeners</title>
+        <style>
+
+        </style>
+        
+    </head>
+    <body>
+        <div id = "myDiv">
+            <p id="para1">This is the first paragraph</p>
+            <p id="para2">This is another paragraph</p>
+        </div>
+          <script>
+            
+            var para = document.createElement("p");
+            var node = document.createTextNode("This paragraph is going to replace some other paragraph");
+            para.appendChild(node);
+
+            var parent = document.getElementById("myDiv");
+            var childToBeReplaced = document.getElementById("para2");
+
+            parent.replaceChild(para, childToBeReplaced);
+            
+          </script>
+    </body>
+  
+</html>
